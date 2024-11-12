@@ -144,7 +144,8 @@ class dictry:
                 if type(v) == set:
                     e.union(v)
                 else:
-                    self.merged[k] = set(v).union(e)
+                    m = {v}
+                    self.merged[k] = m.union(e)
 
         def merge(self, key, lhs: dict[str,str], rhs: dict[str,str]):
             self.set(lhs)

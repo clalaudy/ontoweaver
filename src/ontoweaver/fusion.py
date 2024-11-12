@@ -133,7 +133,7 @@ def reconciliate_nodes(nodes):
     # Fuse them
     use_key    = merge.string.UseKey()
     identicals = merge.string.EnsureIdentical()
-    in_lists   = merge.dictry.Append()
+    in_lists   = merge.dictry.Append(";")
     node_fuser = fuse.Members(base.Node,
             merge_ID    = use_key,
             merge_label = identicals,
